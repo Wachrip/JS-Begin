@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 5</title>
+  </head>
+  <body>
+    <pre>
+        Задание:
+        Создайте функцию, которая принимает массив значений и возвращает массив с дублирующимися значениями или null если повторяющихся значений в массиве нет.
+    </pre>
+    <script>
+      //     for (let i = 0; i < values.length; i++) {
+      //     for (let j = i + 1; j < values.length; j++) {
+      //       if (values[i] === values[j])
+      //         console.log(`${values[i]}-index${i} ${values[j]}-index${j}`);
+      //     }
+      //   }
+      let arr = [2, 2, 1, 5, 1, 5];
+
+      let showCopy = (arr) => {
+        let newArr = [];
+        for (let i = 0; i < arr.length; i++) {
+          for (let j = i + 1; j < arr.length; j++) {
+            if (arr[i] === arr[j]) newArr.push(arr[j]);
+          }
+        }
+        return newArr;
+      };
+
+      console.log(showCopy(arr));
+    </script>
+  </body>
+</html>
